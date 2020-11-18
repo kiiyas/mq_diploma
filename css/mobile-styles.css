@@ -30,8 +30,12 @@
 }
 
 .submenu {
+    position: absolute;
+    left: -30%;
+    top: 100%;
     width: 50vmin;
-    margin-left: -200%;
+    margin-left: -20vmin;
+    text-align: end;
 }
 
 .menu {
