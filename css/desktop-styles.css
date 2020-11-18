@@ -221,11 +221,12 @@ body {
 
 .header-container {
     margin: auto;
-    padding: 1.8% 14.7%;
+    padding-top: 1.8%;
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 1;
+    max-width: 75%;
 }
 
 .navigation-container {
@@ -235,11 +236,25 @@ body {
     align-items: center;
 }
 
+.header-logo-wrapper {
+    max-width: 15.1%;
+    min-width: 15.1%;
+}
 
-/* DROP-MENU разобрать *********************************************************/
+.header-logo {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
 
-.drop-menu {
-    display: none;
+
+/* DROP-MENU *********************************************************/
+
+@media (min-width: 1200px) {
+    .drop-menu {
+        display: none;
+    }
 }
 
 nav ul {
@@ -262,16 +277,6 @@ nav a.topmenu-link {
     position: relative;
 }
 
-.topmenu>li:after {
-    content: "";
-    position: absolute;
-    right: 0;
-    width: 1px;
-    height: 12px;
-    background: #d2d2d2;
-    top: 16px;
-}
-
 .topmenu>li>a {
     padding: 12px 26px;
     text-transform: uppercase;
@@ -279,24 +284,34 @@ nav a.topmenu-link {
 
 .submenu {
     position: absolute;
-    left: 50%;
+    left: 0;
     top: 100%;
-    width: 210px;
+    width: 25vmax;
     margin-left: -105px;
-    background: #fafafa;
+    background: #ffffff;
     border: 1px solid #ededed;
     z-index: 5;
     visibility: hidden;
     opacity: 0;
     transform: scale(.8);
     transition: .4s ease-in-out;
+    text-align: center;
 }
 
 .submenu li a {
+    font-family: OpenSans-Regular, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #4b4b4b;
     padding: 10px 0;
     margin: 0 10px;
     border-bottom: 1px solid #efefef;
-    font-size: 12px;
+    font-size: 2rem;
+    line-height: 5rem;
+}
+
+.submenu li a:hover {
+    color: #000000;
 }
 
 .topmenu>li:hover .submenu {
@@ -331,20 +346,20 @@ nav a.topmenu-link {
 }
 
 .header-title-text {
-    max-width: 58%;
+    max-width: 74%;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-    padding: 6.4% 0;
+    padding: 6.4% 0 8.2% 0;
     font-family: OpenSans-Bold, sans-serif;
     text-transform: uppercase;
     color: #ffffff;
     font-size: 4.5rem;
-    line-height: 1.6;
+    line-height: 1.4;
 }
 
 
-/* ASIDE TREND ***********************************************************/
+/* BAR TREND ***********************************************************/
 
 .trend-posts-bar {
     text-align: center;
@@ -441,18 +456,19 @@ nav a.topmenu-link {
 
 .container {
     flex-grow: 5;
-    width: 72.3%;
+    max-width: 75%;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 1.25%;
-    padding-left: 1.25%;
+    padding-right: 15px;
+    padding-left: 15px;
     display: flex;
     justify-content: space-between;
 }
 
-.main-posts {
-    width: 65%;
-}
+
+/*.main-posts {
+    width: calc (100% - 272px);
+}*/
 
 .main-post {
     display: flex;
@@ -464,10 +480,15 @@ nav a.topmenu-link {
 
 .article-img {
     margin-right: 2.5%;
+    max-width: 50%;
+    min-width: 50%;
 }
 
 .post-img {
     display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .tags {
@@ -548,7 +569,9 @@ nav a.topmenu-link {
 /* SIDEBAR *********************************************************/
 
 .sidebar {
-    width: 24.6%;
+    margin-left: 10%;
+    width: 272px;
+    /*Так при адаптиве только на мобильные устройства надо будет сделать на всю ширину, а на всех остальных разрешениях .sidebar будет со своей нужной шириной, пока .main-posts занимает всё оставшееся пространство*/
 }
 
 .sidebar-item {
@@ -766,13 +789,11 @@ nav a.topmenu-link {
 
 .goods-bar {
     margin-top: 5.3%;
-    width: 72.3%;
+    max-width: 75%;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 1.25%;
-    padding-left: 1.25%;
-    display: flex;
-    flex-direction: column;
+    padding-right: 15px;
+    padding-left: 15px;
     text-align: center;
 }
 
@@ -903,9 +924,9 @@ nav a.topmenu-link {
 }
 
 .footer-wrapper {
-    width: 72.3%;
+    max-width: 75%;
     margin: auto;
-    padding: 0 1.25%;
+    padding: 0 15px;
 }
 
 .socials-container {
