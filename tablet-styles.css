@@ -1,0 +1,153 @@
+@media (orientation: portrait) {
+    .popup-container {
+        width: 50vmin;
+    }
+}
+
+@media (orientation: landscape) {
+    .popup-container {
+        width: 25vmax;
+    }
+}
+
+.header {
+    background-image: url('../images/banner-bg-tablet.jpg');
+}
+
+.header-container {
+    padding-top: 4%;
+    max-width: 90%;
+}
+
+.menu {
+    display: none;
+    visibility: hidden;
+}
+
+.header-logo-wrapper {
+    max-width: 23.7%;
+    min-width: 23.7%;
+}
+
+.header-title-text {
+    font-size: 4rem;
+}
+
+.trend-posts-bar {
+    margin: 50px 0;
+}
+
+.block-title {
+    font-size: 1.8rem;
+}
+
+.trend-posts {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.trend-post {
+    box-sizing: border-box;
+    width: 49.8%;
+    margin-bottom: .5%;
+}
+
+.trend-post:nth-child(n+2) {
+    margin-left: 0;
+}
+
+.trend-post-title {
+    font-size: 1.7rem;
+}
+
+.container {
+    max-width: 100%;
+    padding: 0 35px;
+}
+
+.main-post {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 6%;
+}
+
+.main-post:not(:last-child) {
+    padding-bottom: 4%;
+    border-bottom: 3px solid #eeeeee;
+}
+
+.article-img {
+    margin-right: 0;
+    max-width: 100%;
+    min-width: 100%;
+    margin-bottom: 3.5%;
+}
+
+.post-img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.article-name {
+    font-size: 1.7rem;
+    line-height: 1.2;
+    margin-bottom: 9%;
+}
+
+.post-data {
+    margin-bottom: 9%;
+}
+
+.sidebar {
+    margin-left: 5%;
+    min-width: 272px;
+    flex-shrink: 0;
+}
+
+.goods-bar {
+    max-width: 100%;
+    padding: 0 35px;
+}
+
+.goods-posts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2%;
+}
+
+.goods-post {
+    width: 47%;
+}
+
+.goods-post:nth-child(n+2) {
+    margin-left: 0;
+}
+
+.goods-post:nth-child(3n+1),
+.goods-post:nth-child(3n+2) {
+    margin-bottom: 3%;
+}
+
+.footer {
+    margin-top: 3.6%;
+    text-align: center;
+}
+
+.footer-wrapper {
+    max-width: 100%;
+    padding: 0 35px;
+}
+
+.socials-container {
+    padding-top: 4.7%;
+    padding-bottom: 4.7%;
+    background-color: #f4f7f6;
+}
+
+.copyright {
+    padding-top: 6.6%;
+}
