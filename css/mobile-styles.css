@@ -1,13 +1,11 @@
-@media (orientation: portrait) {
-    .popup-container {
-        width: 92vmin;
-    }
+.popup-container {
+    max-width: 91%;
 }
 
-@media (orientation: landscape) {
-    .popup-container {
-        width: 50vmax;
-    }
+.popup-close {
+    top: -30px;
+    width: 30px;
+    height: 30px;
 }
 
 .header {
@@ -15,7 +13,7 @@
 }
 
 .header-container {
-    padding-top: 4%;
+    padding-top: 33px;
     max-width: 92%;
 }
 
@@ -25,16 +23,21 @@
 
 .drop-menu {
     order: 1;
-    margin-bottom: 55%;
+    margin-bottom: 170px;
     align-self: flex-end;
+}
+
+.topmenu>li>a {
+    width: 20px;
 }
 
 .submenu {
     position: absolute;
-    left: -30%;
+    left: -40vmin;
+    right: 0;
     top: 100%;
     width: 50vmin;
-    margin-left: -20vmin;
+    margin-left: 0;
     text-align: end;
 }
 
@@ -45,14 +48,13 @@
 }
 
 .header-logo-wrapper {
-    max-width: 75%;
-    min-width: 75%;
+    width: 270px;
     order: 2;
 }
 
 .header-title-text {
     font-size: 2.6rem;
-    max-width: 78%;
+    max-width: 280px;
     padding: 13.8% 0 69% 0;
 }
 
@@ -69,12 +71,12 @@
 .trend-post {
     box-sizing: border-box;
     width: 100%;
-    margin-bottom: .5%;
-    padding: 4.5%;
+    margin-bottom: 3px;
+    padding: 15px;
 }
 
 .trend-post-content {
-    padding: 6% 7%;
+    padding: 30px 15px;
 }
 
 .trend-post:nth-child(n+2) {
@@ -94,19 +96,19 @@
 .main-post {
     flex-direction: column;
     width: 100%;
-    padding-bottom: 8%;
+    padding-bottom: 23px;
     border-bottom: 3px solid #eeeeee;
 }
 
 .main-post:not(:last-child) {
-    margin-bottom: 11%;
+    margin-bottom: 35px;
 }
 
 .article-img {
     margin-right: 0;
     max-width: 100%;
     min-width: 100%;
-    margin-bottom: 3.5%;
+    margin-bottom: 15px;
 }
 
 .post-img {
@@ -119,21 +121,21 @@
 .article-name {
     font-size: 1.6rem;
     line-height: 1.2;
-    margin-bottom: 9%;
+    margin-bottom: 25px;
 }
 
 .post-data {
-    margin-bottom: 9%;
+    margin-bottom: 25px;
 }
 
 .sidebar {
     width: 100%;
     flex-direction: column;
-    margin: 14% 0;
+    margin: 45px 0;
 }
 
 .sidebar-item {
-    margin-bottom: 14%;
+    margin-bottom: 20px;
 }
 
 .sidebar-item:last-child {
@@ -141,6 +143,7 @@
 }
 
 .goods-bar {
+    margin-top: 0;
     max-width: 100%;
     padding: 0 15px;
 }
@@ -152,6 +155,7 @@
 
 .goods-post {
     width: 100%;
+    margin-top: 30px;
 }
 
 .goods-post:nth-child(n+2) {
@@ -160,11 +164,17 @@
 
 .goods-post:nth-child(3n+1),
 .goods-post:nth-child(3n+2) {
-    margin-bottom: 6%;
+    margin-bottom: 30px;
+}
+
+.goods-img {
+    width: 90%;
+    margin-bottom: -50px;
+    object-fit: contain;
 }
 
 .footer {
-    margin-top: 10%;
+    margin-top: 40px;
     text-align: center;
 }
 
@@ -174,15 +184,12 @@
 }
 
 .socials-container {
-    padding-top: 4.7%;
-    padding-bottom: 4.7%;
+    padding-top: 30px;
+    padding-bottom: 30px;
     background-color: #f4f7f6;
 }
 
-.socials-item:not(:last-child) {
-    margin-right: 8.5%;
-}
-
 .copyright {
-    padding-top: 6.6%;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }

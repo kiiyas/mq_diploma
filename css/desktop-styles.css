@@ -46,34 +46,34 @@ body {
 /* POP-UP *********************************************************/
 
 .popup-wrapper {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     align-items: center;
+    justify-content: center;
     z-index: 999;
 }
 
 .popup-container {
-    width: 23.5vmax;
-    padding: 3.2vmax 1.8vmax;
+    max-width: 390px;
+    padding: 52px 30px;
     box-sizing: border-box;
     background-color: #ffffff;
-    margin: auto;
     font-family: OpenSans-Regular;
     position: relative;
 }
 
 .popup-header {
     text-align: center;
-    margin-bottom: 1.8%;
+    margin-bottom: 30px;
 }
 
 .form-row:not(:last-child) {
-    margin-bottom: 6%;
+    margin-bottom: 30px;
 }
 
 .form-hint {
@@ -81,29 +81,32 @@ body {
     font-family: OpenSans-Regular;
     font-size: 1.3rem;
     font-weight: normal;
-    margin-bottom: 2%;
+    margin-bottom: 12px;
 }
 
 .popup-select {
     -webkit-appearance: none;
     -moz-appearance: none;
     display: block;
-    width: 70%;
-    height: 2.7%;
-    padding: 1.5%;
-    border: none;
-    background-color: #f4f7f6;
     font-family: inherit;
     font-size: 1.3rem;
     background-image: url('../svg/form-arrows.svg');
-    background-size: 4%;
     background-repeat: no-repeat;
-    background-position: right .9% center;
+    background-size: 11px;
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    margin: 0;
+    padding: 16px;
+    width: 100%;
+    height: 49px;
+    border: none;
+    background-color: #f4f7f6;
 }
 
 .radio-group-text {
     font-size: 1.3rem;
-    line-height: 1.3rem;
+    line-height: 1;
 }
 
 .radio-group-text::before {
@@ -119,11 +122,8 @@ body {
 
 .radio-group-text::before {
     display: inline-block;
-    vertical-align: baseline;
-}
-
-.radio-group-text::before {
-    margin-right: .3vmax;
+    margin-right: 5px;
+    vertical-align: middle;
 }
 
 .radio-group {
@@ -132,7 +132,7 @@ body {
 }
 
 .radio-group:nth-of-type(n+2) {
-    margin-left: 3vmax;
+    margin-left: 12px;
 }
 
 .radio:checked~.radio-group-text::before {
@@ -151,11 +151,11 @@ body {
     -moz-appearance: none;
     box-sizing: border-box;
     display: block;
-    min-width: 70%;
-    max-width: 70%;
-    min-height: 25%;
-    max-height: 25%;
-    padding: 2%;
+    padding: 16px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 130px;
+    max-height: 300px;
     border: none;
     background-color: #f4f7f6;
     font-family: inherit;
@@ -163,14 +163,13 @@ body {
 }
 
 .popup-button {
-    width: 70%;
-    padding: 5.1% 8%;
+    width: 100%;
+    height: 49px;
     border-style: none;
     background-color: #b59f5b;
     color: #ffffff;
     font-family: OpenSans-Bold, sans-serif;
     text-transform: uppercase;
-    margin-top: 1.5vmax;
     cursor: pointer;
 }
 
@@ -180,11 +179,11 @@ body {
 
 .popup-close {
     content: "";
-    width: 1.02vmax;
-    height: 1.02vmax;
-    position: absolute;
     right: 0;
-    top: -1.5vmax;
+    top: -25px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
     display: block;
     background-size: 1.02vmax;
     cursor: pointer;
@@ -229,13 +228,15 @@ body {
 }
 
 .header-container {
+    max-width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
     margin: auto;
-    padding-top: 1.8%;
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 1;
-    max-width: 75%;
 }
 
 .navigation-container {
@@ -246,8 +247,7 @@ body {
 }
 
 .header-logo-wrapper {
-    max-width: 15.1%;
-    min-width: 15.1%;
+    width: 183px;
 }
 
 .header-logo {
@@ -287,15 +287,18 @@ nav a.topmenu-link {
 }
 
 .topmenu>li>a {
-    padding: 12px 26px;
+    padding: 12px 0;
     text-transform: uppercase;
+    width: 40px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .submenu {
     position: absolute;
     left: 0;
     top: 100%;
-    width: 25vmax;
+    width: 25vmin;
     margin-left: -105px;
     background: #ffffff;
     border: 1px solid #ededed;
@@ -355,16 +358,15 @@ nav a.topmenu-link {
 }
 
 .header-title-text {
-    max-width: 74%;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: 740px;
+    margin: 0 auto;
     text-align: center;
-    padding: 6.4% 0 8.2% 0;
+    padding: 75px 0 100px 0;
     font-family: OpenSans-Bold, sans-serif;
     text-transform: uppercase;
     color: #ffffff;
     font-size: 4.5rem;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 
@@ -401,7 +403,7 @@ nav a.topmenu-link {
     display: flex;
     align-items: flex-end;
     width: 25%;
-    padding: 1.2% 1.6%;
+    padding: 16px 21px;
     background-color: #000000;
     background-repeat: no-repeat;
     background-size: cover;
@@ -426,7 +428,8 @@ nav a.topmenu-link {
 
 .trend-post-content {
     text-align: start;
-    padding: 7.3% 9%;
+    padding: 25px 30px;
+    width: 100%;
     border: 3px solid #b59f5b;
     position: relative;
     z-index: 1;
@@ -465,7 +468,7 @@ nav a.topmenu-link {
 
 .container {
     flex-grow: 5;
-    max-width: 75%;
+    max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 15px;
@@ -474,21 +477,16 @@ nav a.topmenu-link {
     justify-content: space-between;
 }
 
-
-/*.main-posts {
-    width: calc (100% - 272px);
-}*/
-
 .main-post {
     display: flex;
 }
 
 .main-post:not(:last-child) {
-    margin-bottom: 5%;
+    margin-bottom: 60px;
 }
 
 .article-img {
-    margin-right: 2.5%;
+    margin-right: 30px;
     max-width: 50%;
     min-width: 50%;
 }
@@ -501,10 +499,9 @@ nav a.topmenu-link {
 }
 
 .tags {
-    margin-bottom: 3%;
+    margin-bottom: 13px;
     display: flex;
     list-style-type: none;
-    margin-left: .2%;
 }
 
 .tags-area:not(:last-of-type) {
@@ -529,7 +526,7 @@ nav a.topmenu-link {
     text-transform: uppercase;
     font-size: 2rem;
     line-height: 1.2;
-    margin-bottom: 8%;
+    margin-bottom: 30px;
 }
 
 .article-name-link {
@@ -542,7 +539,7 @@ nav a.topmenu-link {
 }
 
 .post-data {
-    margin-bottom: 11.5%;
+    margin-bottom: 55px;
 }
 
 .post-date {
@@ -550,7 +547,7 @@ nav a.topmenu-link {
     font-size: 1.2rem;
     line-height: normal;
     color: #888888;
-    margin-right: 1.28%;
+    margin-right: 1.2rem;
     /* + standart space   */
     display: inline-block;
 }
@@ -571,20 +568,21 @@ nav a.topmenu-link {
 }
 
 .article-preview:nth-of-type(n+2) {
-    margin-top: 1.9%;
+    margin-top: 1.4rem;
 }
 
 
 /* SIDEBAR *********************************************************/
 
 .sidebar {
-    margin-left: 10%;
+    margin-left: 100px;
+    flex: none;
     width: 272px;
     /*Так при адаптиве только на мобильные устройства надо будет сделать на всю ширину, а на всех остальных разрешениях .sidebar будет со своей нужной шириной, пока .main-posts занимает всё оставшееся пространство*/
 }
 
 .sidebar-item {
-    margin-bottom: 22.2%;
+    margin-bottom: 60px;
 }
 
 .sidebar-item:last-child {
@@ -594,7 +592,7 @@ nav a.topmenu-link {
 .sidebar-header {
     display: block;
     text-align: center;
-    margin-bottom: 9.26%;
+    margin-bottom: 30px;
     font-family: OpenSans-Bold, sans-serif;
     font-size: 1.4rem;
     line-height: normal;
@@ -605,7 +603,7 @@ nav a.topmenu-link {
     content: "";
     display: block;
     text-align: center;
-    margin: 1.3rem auto 2.3rem auto;
+    margin: 1rem auto 2.3rem auto;
     background-color: #b59f5b;
     width: 6.5rem;
     height: .3rem;
@@ -613,13 +611,13 @@ nav a.topmenu-link {
 }
 
 .new-post-item {
-    margin-bottom: 7.41%;
+    margin-bottom: 20px;
     display: flex;
     align-items: flex-start;
 }
 
 .sidebar-item-imgs {
-    margin-right: 7%;
+    margin-right: 20px;
 }
 
 .sidebar-item-img {
@@ -642,7 +640,6 @@ nav a.topmenu-link {
     font-size: 1.4rem;
     line-height: 1.2;
     text-transform: uppercase;
-    margin-top: 2.22%;
 }
 
 .sidebar-item-link {
@@ -656,7 +653,7 @@ nav a.topmenu-link {
 
 .search-form {
     display: flex;
-    margin-top: 22.22%;
+    margin-top: 60px;
     display: flex;
     justify-content: space-between;
 }
@@ -670,18 +667,20 @@ nav a.topmenu-link {
     box-sizing: border-box;
     font-size: 1.3rem;
     border-style: none;
-    padding: 6%;
+    padding: 16px;
     background-color: #f4f7f6;
     font-family: OpenSans-Regular, sans-serif;
     font-size: 1.3rem;
     line-height: 1;
     min-width: 100%;
     max-width: 100%;
+    height: 49px;
 }
 
 .search-button {
     box-sizing: border-box;
-    width: 18%;
+    width: 49px;
+    height: 49px;
     background-image: url('../svg/search.svg');
     background-size: 40%;
     background-color: #b59f5b;
@@ -709,9 +708,9 @@ nav a.topmenu-link {
 .email-field {
     display: inline-block;
     box-sizing: border-box;
-    width: 100%;
+    height: 49px;
     border-style: none;
-    padding: 6%;
+    padding: 16px;
     background-color: #f4f7f6;
     font-family: OpenSans-Regular, sans-serif;
     font-size: 1.3rem;
@@ -722,13 +721,13 @@ nav a.topmenu-link {
 
 .email-button {
     width: 100%;
+    height: 49px;
     border-style: none;
-    padding: 5.1% 8%;
     background-color: #b59f5b;
     color: #ffffff;
     font-family: OpenSans-Bold, sans-serif;
     text-transform: uppercase;
-    margin-top: 6.5%;
+    margin-top: 18px;
     cursor: pointer;
 }
 
@@ -763,7 +762,7 @@ nav a.topmenu-link {
 
 .thema-items {
     list-style-type: none;
-    margin-top: -5.5%;
+    margin-top: -15px;
     /* блок специфичен пустотами в строках, поэтому дизайнер сдвинул его контент ближе к заголовку */
 }
 
@@ -771,9 +770,8 @@ nav a.topmenu-link {
     display: block;
     box-sizing: border-box;
     border-bottom: 1px solid #eeeeee;
-    padding-top: 4.8%;
-    padding-bottom: 5.1%;
-    padding-left: .74%;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
     text-decoration: none;
     color: #0f0d0e;
     font-family: OpenSans-Bold, sans-serif;
@@ -797,8 +795,8 @@ nav a.topmenu-link {
 /* GOODS-ASIDE ********************************************************/
 
 .goods-bar {
-    margin-top: 5.3%;
-    max-width: 75%;
+    margin-top: 60px;
+    max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 15px;
@@ -809,28 +807,24 @@ nav a.topmenu-link {
 .goods-posts {
     display: flex;
     flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
 
 .goods-post {
     display: flex;
-    width: 33.33%;
-    background-repeat: no-repeat;
-    background-size: 85% auto;
-    background-position: center top;
+    flex-direction: column;
+    text-align: center;
+    width: 33.333%;
     position: relative;
 }
 
 .goods-post:nth-child(n+2) {
-    margin-left: 5.4%;
+    margin-left: 63px;
 }
 
-.goods-post-wrapper {
-    margin-top: 40%;
-    padding: 15.7% 6.5% 10% 6.5%;
-    display: flex;
-}
 
-.goods-post1 {
+/*.goods-post1 {
     background-image: url('../images/shop-item-desk1.jpg');
 }
 
@@ -840,7 +834,7 @@ nav a.topmenu-link {
 
 .goods-post3 {
     background-image: url('../images/shop-item-desk3.jpg');
-}
+}*/
 
 .goods-post::after {
     border: 3px solid #b59f5b;
@@ -849,7 +843,13 @@ nav a.topmenu-link {
     position: absolute;
     width: 100%;
     height: 63%;
-    top: 35%;
+    top: 170px;
+}
+
+.goods-img {
+    width: 85%;
+    margin-bottom: -30px;
+    text-align: center;
 }
 
 .goods-post-content {
@@ -857,13 +857,15 @@ nav a.topmenu-link {
     position: relative;
     z-index: 1;
     box-sizing: border-box;
+    flex-grow: 2;
+    padding: 55px 20px 20px;
 }
 
 .goods-post-title {
     font-family: OpenSans-Bold, sans-serif;
     text-transform: uppercase;
     font-size: 2rem;
-    margin-top: 7%;
+    margin-top: 25px;
 }
 
 .goods-post-text {
@@ -893,7 +895,7 @@ nav a.topmenu-link {
 }
 
 .goods-bar-footer {
-    margin-top: 7%;
+    margin-top: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -909,9 +911,8 @@ nav a.topmenu-link {
     display: block;
     box-sizing: border-box;
     width: 47%;
-    /*height: 14%;*/
+    height: 49px;
     border-style: none;
-    padding: 5.1% 8%;
     background-color: #b59f5b;
     color: #ffffff;
     font-family: OpenSans-Bold, sans-serif;
@@ -928,19 +929,19 @@ nav a.topmenu-link {
 /* FOOTER ********************************************************/
 
 .footer {
-    margin-top: 3.6%;
+    margin-top: 60px;
     text-align: center;
 }
 
 .footer-wrapper {
-    max-width: 75%;
+    max-width: 1200px;
     margin: auto;
     padding: 0 15px;
 }
 
 .socials-container {
-    padding-top: 2.33%;
-    padding-bottom: 2.33%;
+    padding-top: 30px;
+    padding-bottom: 30px;
     background-color: #f4f7f6;
 }
 
@@ -953,7 +954,7 @@ nav a.topmenu-link {
 }
 
 .socials-item:not(:last-child) {
-    margin-right: 2.5%;
+    margin-right: 25px;
 }
 
 .socials-link {
@@ -999,8 +1000,8 @@ nav a.topmenu-link {
 
 .copyright {
     text-align: center;
-    padding-top: 6%;
-    padding-bottom: 3.33%;
+    padding-top: 75px;
+    padding-bottom: 45px;
 }
 
 .copyright-link {
