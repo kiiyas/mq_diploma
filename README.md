@@ -1,7 +1,8 @@
 # Дипломный проект по адаптивной верстке (НЕТОЛОГИЯ)
 
 [ССЫЛКА НА САЙТ](https://kiiyas.github.io/mq_diploma/)
-[инструкция](https://github.com/netology-code/guides/tree/master/relative-link)
+
+*[инструкция](https://github.com/netology-code/guides/tree/master/relative-link)
 
 В рамках дипломного проекта необходимо было сверстать по psd-макетам версии сайта для трех групп устройств: десктопные экраны, планшеты и смартфоны.
 
