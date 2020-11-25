@@ -44,14 +44,23 @@
     width: 100%;
 }
 
-.trend-post {
-    box-sizing: border-box;
-    width: 49.8%;
-    margin-bottom: 3px;
+@media (orientation: landscape) {
+    .trend-post {
+        box-sizing: border-box;
+        width: 24.7%;
+        margin-bottom: 4px;
+    }
 }
 
-.trend-post:nth-child(n+2) {
-    margin-left: 0;
+@media (orientation: portrait) {
+    .trend-post {
+        box-sizing: border-box;
+        width: 49.8%;
+        margin-bottom: 4px;
+    }
+    .trend-post:nth-child(n+2) {
+        margin-left: 0;
+    }
 }
 
 .trend-post-title {
