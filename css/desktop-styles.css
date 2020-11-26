@@ -396,23 +396,24 @@ nav a.topmenu-link {
 
 .trend-posts {
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 .trend-post {
     display: flex;
-    align-items: flex-end;
-    width: 25%;
+    position: relative;
+    width: calc(25% - 4px);
+    min-height: 320px;
+    margin-right: 4px;
     padding: 16px 21px;
     background-color: #000000;
-    background-repeat: no-repeat;
-    background-size: cover;
     background-position: center center;
-    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.trend-post:nth-child(n+2) {
-    margin-left: 4px;
+.trend-post:last-child {
+    margin-right: 0;
 }
 
 .trend-post::after {
@@ -427,13 +428,15 @@ nav a.topmenu-link {
 }
 
 .trend-post-content {
+    align-self: flex-end;
     text-align: start;
-    padding: 25px 30px;
+    padding: 10%;
     width: 100%;
     border: 3px solid #b59f5b;
     position: relative;
     z-index: 1;
     margin-top: 34%;
+    flex-grow: 1;
 }
 
 .trend-post1 {

@@ -38,28 +38,31 @@
     font-size: 1.8rem;
 }
 
-.trend-posts {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-}
-
 @media (orientation: landscape) {
+    .trend-posts {
+        flex-wrap: nowrap;
+        width: 100%;
+    }
     .trend-post {
         box-sizing: border-box;
-        width: 24.7%;
+        width: 24.5%;
         margin-bottom: 4px;
     }
 }
 
 @media (orientation: portrait) {
+    .trend-posts {
+        flex-wrap: wrap;
+        width: 100%;
+    }
     .trend-post {
         box-sizing: border-box;
-        width: 49.8%;
+        width: calc(50% - 4px);
+        min-height: 250px;
         margin-bottom: 4px;
     }
-    .trend-post:nth-child(n+2) {
-        margin-left: 0;
+    .trend-post:nth-child(even) {
+        margin-right: 0;
     }
 }
 

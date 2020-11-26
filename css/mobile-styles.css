@@ -64,14 +64,13 @@
 
 .trend-posts {
     flex-wrap: wrap;
-    justify-content: space-between;
     width: 100%;
 }
 
 .trend-post {
     box-sizing: border-box;
     width: 100%;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
     padding: 15px;
 }
 
@@ -79,8 +78,9 @@
     padding: 30px 15px;
 }
 
-.trend-post:nth-child(n+2) {
-    margin-left: 0;
+.trend-post:nth-child(even),
+.trend-post:nth-child(odd) {
+    margin-right: 0;
 }
 
 .trend-post-title {
